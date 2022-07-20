@@ -2,8 +2,8 @@
   "extends": "./tsconfig",
   "compilerOptions": {
     "emitDeclarationOnly": true,
-    // "declaration": true,
-    // "declarationMap": true,
+    "declaration": true,
+    "declarationMap": true,
     "declarationDir": "dist",
     "sourceMap": true
   },

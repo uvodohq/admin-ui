@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
     build: {
       lib: {
         entry: path.resolve(__dirname, 'src/index.ts'),
-        formats: ['es'],
+        // formats: ['es'],
         name: 'admin-ui',
       },
       sourcemap: isProd,

@@ -1,8 +1,8 @@
 {
   "name": "@uvodohq/admin-ui",
   "type": "module",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.0-beta.1",
+  "private": "false",
   "description": "Admin UI - Uvodo Self-hosted eCommerce platform for digital agencies",
   "keywords": [
     "react",
@@ -12,13 +12,13 @@
   ],
   "homepage": "https://uvodo.com",
   "license": "MIT",
-  "main": "./dist/admin-ui.umd.js",
-  "module": "./dist/admin-ui.es.js",
+  "main": "./dist/admin-ui.umd.cjs",
+  "module": "./dist/admin-ui.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/admin-ui.es.js",
-      "require": "./dist/admin-ui.umd.js"
+      "import": "./dist/admin-ui.js",
+      "require": "./dist/admin-ui.umd.cjs"
     }
   },
   "files": [
@@ -31,7 +31,7 @@
   "sideEffects": false,
   "scripts": {
     "dev": "vite serve example",
-    "build": "yarn build:type && vite build",
+    "build": "vite build && yarn build:type",
     "build:example": "vite build example",
     "build:type": "tsc --project tsconfig.build.json",
     "serve:example": "yarn build:example && vite preview example",
@@ -40,7 +40,8 @@
     "lint:fix": "yarn lint --fix",
     "format": "prettier **/*.{ts,tsx,js,jsx,json,md,mdx} --ignore-path .gitignore",
     "format:check": "yarn format --check",
-    "format:fix": "yarn format --write"
+    "format:fix": "yarn format --write",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "@uvodohq/planum": "^0.0.0-beta.1",
