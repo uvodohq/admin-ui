@@ -4,6 +4,10 @@
 npm install @uvodohq/admin-ui @uvodohq/planum
 ```
 
+## Demo example:
+
+https://codesandbox.io/s/uvodo-admin-ui-app-layout-3w9b4e?file=/src/App.js
+
 # How to use <AdminLayout/>
 
 ```jsx

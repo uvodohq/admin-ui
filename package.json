@@ -1,7 +1,7 @@
 {
   "name": "@uvodohq/admin-ui",
   "type": "module",
-  "version": "0.0.0-beta.6",
+  "version": "0.0.0-beta.8",
   "private": false,
   "description": "Admin UI - Uvodo Self-hosted eCommerce platform for digital agencies",
   "keywords": [
@@ -24,7 +24,8 @@
   },
   "files": [
     "dist",
-    "package.json"
+    "package.json",
+    "README.md"
   ],
   "publishConfig": {
     "directory": "dist"
