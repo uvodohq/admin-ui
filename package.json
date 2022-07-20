@@ -1,0 +1,65 @@
+{
+  "name": "@uvodohq/admin-ui",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Admin UI - Uvodo Self-hosted eCommerce platform for digital agencies",
+  "keywords": [
+    "react",
+    "ui",
+    "ecommerce",
+    "uvodo"
+  ],
+  "homepage": "https://uvodo.com",
+  "license": "MIT",
+  "main": "./dist/admin-ui.umd.js",
+  "module": "./dist/admin-ui.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/admin-ui.es.js",
+      "require": "./dist/admin-ui.umd.js"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite serve example",
+    "build": "yarn build:type && vite build",
+    "build:example": "vite build example",
+    "build:type": "tsc --project tsconfig.build.json",
+    "serve:example": "yarn build:example && vite preview example",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "lint:check": "yarn lint --cache --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier **/*.{ts,tsx,js,jsx,json,md,mdx} --ignore-path .gitignore",
+    "format:check": "yarn format --check",
+    "format:fix": "yarn format --write"
+  },
+  "dependencies": {
+    "@uvodohq/planum": "^0.0.0-beta.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-react": "^0.23.0",
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0"
+  }
+}

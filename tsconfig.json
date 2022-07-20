@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    // "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["react", "vite/client", "node"],
+    "noImplicitAny": false,
+    // for path alieses, look vite.config
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["src", "example"],
+  "exclude": [
+    "./node_modules",
+    "./dist",
+    "./generators",
+    ".git",
+    "**/node_modules"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
