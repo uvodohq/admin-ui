@@ -1,13 +1,14 @@
 import react from '@vitejs/plugin-react'
 import * as path from 'node:path'
+import { visualizer as PluginVisualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const isProd = mode === 'production'
+  const isDev = mode === 'development'
 
   return {
-    plugins: [react()],
+    plugins: [react(), PluginVisualizer()],
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
@@ -20,16 +21,17 @@ export default defineConfig(({ mode }) => {
         // formats: ['es'],
         name: 'admin-ui',
       },
-      sourcemap: isProd,
-      minify: isProd,
+      sourcemap: !isDev,
+      minify: !isDev,
       rollupOptions: {
-        treeshake: isProd,
-        external: ['react', 'react-dom'],
+        treeshake: !isDev,
+        external: ['react', 'react-dom', '@uvodohq/planum'],
         output: {
           // Provide global variables to use in UMD build for externalized deps
           globals: {
             react: 'React',
             'react-dom': 'ReactDOM',
+            '@uvodohq/planum': 'Planum',
           },
         },
       },

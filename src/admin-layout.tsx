@@ -28,11 +28,9 @@ const MainContainer = styled('main', customScrollbar, {
 const HeaderContainer = styled('header', {
   height: 64,
   dflex: 'center',
-  backgroundColor: '$white',
 })
 
 const BodyContainer = styled('section', {
-  bg: '$surface500',
   width: '100%',
   minHeight: 'calc(100% - 64px)',
 })

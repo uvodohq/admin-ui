@@ -1,8 +1,8 @@
 {
   "name": "@uvodohq/admin-ui",
   "type": "module",
-  "version": "0.0.0-beta.1",
-  "private": "false",
+  "version": "0.0.0-beta.6",
+  "private": false,
   "description": "Admin UI - Uvodo Self-hosted eCommerce platform for digital agencies",
   "keywords": [
     "react",
@@ -19,7 +19,8 @@
     ".": {
       "import": "./dist/admin-ui.js",
       "require": "./dist/admin-ui.umd.cjs"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "files": [
     "dist",
@@ -41,18 +42,19 @@
     "format": "prettier **/*.{ts,tsx,js,jsx,json,md,mdx} --ignore-path .gitignore",
     "format:check": "yarn format --check",
     "format:fix": "yarn format --write",
-    "publish": "npm publish --access public"
+    "//": "npm publish --access public"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@uvodohq/planum": "^0.0.0-beta.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^16.8.0 || ^17.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0 || ^18.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config-react": "^0.23.0",
     "@types/node": "^17.0.31",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@uvodohq/planum": "^0.0.0-beta.1",
     "@vitejs/plugin-react": "^2.0.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
@@ -60,6 +62,9 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-visualizer": "^5.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.0"
   }
