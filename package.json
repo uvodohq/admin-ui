@@ -1,9 +1,9 @@
 {
-  "name": "@uvodohq/admin-ui",
+  "name": "@uvodohq/editor",
   "type": "module",
-  "version": "0.0.0-beta.8",
+  "version": "0.0.0-beta.1",
   "private": false,
-  "description": "Admin UI - Uvodo Self-hosted eCommerce platform for digital agencies",
+  "description": "Uvodo Editor - A simple, lightweight, and extensible editor for the web.",
   "keywords": [
     "react",
     "ui",
@@ -12,13 +12,13 @@
   ],
   "homepage": "https://uvodo.com",
   "license": "MIT",
-  "main": "./dist/admin-ui.umd.cjs",
-  "module": "./dist/admin-ui.js",
+  "main": "./dist/editor.umd.cjs",
+  "module": "./dist/editor.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/admin-ui.js",
-      "require": "./dist/admin-ui.umd.cjs"
+      "import": "./dist/editor.js",
+      "require": "./dist/editor.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -46,7 +46,7 @@
     "//": "npm publish --access public"
   },
   "peerDependencies": {
-    "@uvodohq/planum": "^0.0.0-beta.1",
+    "@uvodohq/planum": "^0.0.0-beta.34",
     "react": "^16.8.0 || ^17.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0 || ^18.0.0"
   },
@@ -55,7 +55,7 @@
     "@types/node": "^17.0.31",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "@uvodohq/planum": "^0.0.0-beta.1",
+    "@uvodohq/planum": "^0.0.0-beta.34",
     "@vitejs/plugin-react": "^2.0.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
@@ -68,5 +68,8 @@
     "rollup-plugin-visualizer": "^5.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "framer-motion": "^7.5.3"
   }
 }

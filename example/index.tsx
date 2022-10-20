@@ -1,16 +1,14 @@
 import { createRoot } from 'react-dom/client'
 
-import { AdminLayout } from '~/admin-layout'
-
-import { Box } from './src/components/box'
+import { Editor } from '~/editor'
 
 const container = document.querySelector('#root')
 const root = createRoot(container!)
 
 const App = () => (
-  <AdminLayout>
-    <Box />
-  </AdminLayout>
+  <>
+    <Editor />
+  </>
 )
 
 root.render(<App />)

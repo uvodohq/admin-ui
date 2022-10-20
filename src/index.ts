@@ -1,2 +1,2 @@
-export { AdminLayout } from './admin-layout'
 export * from './components'
+export { Editor } from './editor'
